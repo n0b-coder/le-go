@@ -1,12 +1,38 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <nav-bar class="pt-2 pl-6 pr-6"/>
     </div>
+    <div class="m-2 ml-3 mr-3 is-divider"></div>
     <router-view/>
+    <footer class="footer">
+      <div class="pl-6 pr-6">
+        <div class="level">
+          <div class="level-left">
+            <div class="level-item">
+              © Le-go Eslogan
+            </div>
+          </div>
+          <div class="level-right">
+            <div class="level-item">
+              LOGO
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
+
+<script>
+import NavBar from '@/components/NavBar.vue';
+
+export default {
+  components: {
+    NavBar,
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -19,13 +45,10 @@
 
 #nav {
   padding: 30px;
-
   a {
-    font-weight: bold;
     color: #2c3e50;
-
     &.router-link-exact-active {
-      color: #42b983;
+      color: #18A0FB;
     }
   }
 }
