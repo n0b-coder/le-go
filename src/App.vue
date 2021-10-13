@@ -6,12 +6,16 @@
     <div class="m-2 ml-3 mr-3 is-divider"></div>
     <router-view/>
     <footer class="footer">
-      <div class="pl-6 pr-6">
+      <div class="m-2 ml-3 mr-3 is-divider"></div>
+      <div class="pl-6 pt-3 pr-6">
         <div class="level">
           <div class="level-left">
             <div class="level-item">
-              © Le-go Eslogan
+              <p class="lego-text--caption">© Le-go</p>
             </div>
+          </div>
+          <div class="level-center">
+            <p class="lego-text lego-text--caption lego-text--caption--light">Eslogan</p>
           </div>
           <div class="level-right">
             <div class="level-item">

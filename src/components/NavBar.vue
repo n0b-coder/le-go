@@ -18,13 +18,13 @@
     </div>
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item lego-headings">
+        <a class="navbar-item lego-text">
           <router-link to="/">Inicio</router-link>
         </a>
-        <a class="navbar-item lego-headings">
+        <a class="navbar-item lego-text">
           <router-link to="/gallery">Galería</router-link>
         </a>
-        <a class="navbar-item lego-headings">
+        <a class="navbar-item lego-text">
           <router-link to="/help">Ayuda (?)</router-link>
         </a>
       </div>

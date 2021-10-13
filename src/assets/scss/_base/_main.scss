@@ -5,7 +5,13 @@
   font-weight: 400;
 }
 
-.lego-headings{
+.lego-text{
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+  &--caption{
+    font-size: 14px;
+    &--light{
+      font-weight: 300;
+    }
+  }
 }
