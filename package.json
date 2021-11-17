@@ -12,8 +12,6 @@
   },
   "dependencies": {
     "@splidejs/vue-splide": "^0.3.5",
-    "babylonjs": "^4.2.0",
-    "babylonjs-loaders": "^4.2.0",
     "bulma": "^0.9.3",
     "bulma-divider": "^0.2.0",
     "core-js": "^3.6.5",
