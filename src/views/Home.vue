@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <splide>
-      <splide-slide v-for="image in images.carouselImages" :key=image.id>
-        <img style="width: 100%" :src="image">
+      <splide-slide v-for="image in images.carouselImages" :key="image.id">
+        <img style="width: 100%" class="image" :src="image">
       </splide-slide>
     </splide>
     <div class="container">
@@ -12,11 +12,14 @@
             Encuentra el modelo Lego
           </p>
           <div class="columns is-multiline is-justify-content-space-between">
-      <div v-for="imageCard in images.cardImages" :key="imageCard.id"
-      class="is-one-quarter-desktop column is-clickable">
+      <div v-for="imageCard in images.models" :key="imageCard.id"
+      class="is-one-quarter-desktop column is-clickable"
+      @click="updateCurrentModel(imageCard)">
+      <router-link to="/visualize-object">
         <image-cards
-          :imgUrl = "imageCard"
+          :imgUrl = "imageCard.image"
         />
+      </router-link>
       </div>
     </div>
         </div>
@@ -24,12 +27,12 @@
       <section class="hero is-medium">
         <div class="hero-body">
           <div class="is-flex is-flex-direction-row-reverse is-align-items-center">
-            <p class="title has-text-right lego-titles">
+            <p class="pl-6 title has-text-right lego-titles">
               Visualiza el vídeo demostración
             </p>
-            <figure class="image id-4by3">
-              <img src="https://bulma.io/images/placeholders/800x480.png">
-            </figure>
+            <template>
+                <LazyYoutube aspectRatio="16:9" src="https://www.youtube.com/watch?v=l34EihmVzTI" />
+            </template>
           </div>
         </div>
       </section>
@@ -38,21 +41,25 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 
+import { LazyYoutube } from 'vue-lazytube';
 import ImageCards from '@/components/ImageCards.vue';
 
 export default {
   name: 'Home',
   components: {
     ImageCards,
-  },
-  created() {
-    console.log(this.images.cardImages);
+    LazyYoutube,
   },
   computed: {
     ...mapState([
       'images',
+    ]),
+  },
+  methods: {
+    ...mapActions([
+      'updateCurrentModel',
     ]),
   },
 };

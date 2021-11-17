@@ -1,8 +1,8 @@
 <template>
-  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://google.com">
-        LOGO
+  <nav class="navbar is-fixed-top header" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand header">
+      <a class="navbar-item" href="#">
+        <router-link to="/">LOGO</router-link>
       </a>
       <a
         role="button"
