@@ -1,12 +1,10 @@
 <template>
   <div id="app">
     <div id="nav">
-      <nav-bar class="pt-2 pl-6 pr-6"/>
+      <nav-bar class="pt-2 pb-2 pl-6 pr-6"/>
     </div>
-    <div class="m-2 ml-3 mr-3 is-divider"></div>
     <router-view/>
-    <footer class="footer">
-      <div class="m-2 ml-3 mr-3 is-divider"></div>
+    <footer class="footer footer-text">
       <div class="pl-6 pt-3 pr-6">
         <div class="level">
           <div class="level-left">
